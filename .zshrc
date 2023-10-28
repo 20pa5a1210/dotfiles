@@ -5,7 +5,7 @@ echo "welcome back moron"
 echo "$(cat ~/scripts/surya.txt)"
 
 export PATH="$PATH:~/scripts"
-bindkey -s ^f "~/tmux-sessionizer-bash.sh\n"
+bindkey -s ^f "~/.local/bin/scripts/tmux-sessionizer.sh\n"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
