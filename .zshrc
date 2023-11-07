@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 . ~/.profile
-echo "welcome back moron"
+echo "WELCOME BACK MORON"
 echo "$(cat ~/scripts/surya.txt)"
 
 export PATH="$PATH:~/scripts"
