@@ -142,3 +142,4 @@ alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
