@@ -190,7 +190,7 @@ bar {
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-exec firefox_beta
+exec firefox
 
 exec_always feh --bg-scale /home/kurama/Downloads/cropped-1920-1080-1293817.jpg
 exec_always compton --config ~/.config/compton.conf
