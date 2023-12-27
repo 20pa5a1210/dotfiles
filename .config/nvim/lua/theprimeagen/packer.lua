@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
   }
+  use { 'sourcegraph/sg.nvim', run = 'nvim -l build/init.lua' }
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	  -- or                            , branch = '0.1.x',
