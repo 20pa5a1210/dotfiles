@@ -5,6 +5,7 @@ echo "WELCOME BACK MORON"
 echo "$(cat ~/scripts/surya.txt)"
 
 export PATH="$PATH:~/scripts"
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 bindkey -s ^f "~/.local/bin/scripts/tmux-sessionizer.sh\n"
 
 # Path to your oh-my-zsh installation.
@@ -106,8 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -126,20 +128,6 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-declare -A pomo_options
-pomo_options["work"]="45"
-pomo_options["break"]="10"
-
-pomodoro () {
-  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
-  val=$1
-  timer ${pomo_options["$val"]}m --fullscreen --name working
-  notify-send "'$val' session done"
-  fi
-}
-
-alias wo="pomodoro 'work'"
-alias br="pomodoro 'break'"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
@@ -150,3 +138,4 @@ source <(ng completion script)
 
 # Turso
 export PATH="/home/kurama/.turso:$PATH"
+export PATH=$PATH:/path/to/apache-maven-3.x.x/bin
